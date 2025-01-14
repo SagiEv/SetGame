@@ -1,0 +1,43 @@
+BONUS CHALLENGE FORM
+--------------------
+
+For each bonus challenge you have implemented, please replace the sentence "We are not entitled to this bonus."
+with a short description of:
+
+1. How it was implemented in your code
+2. Where it was used (in which class methods).
+3. How you tested that it is working correctly.
+
+--------------------
+
+1. Fully supporting all configuration fields and avoiding the use of magic numbers
+
+1. We used env.config to get the relevant settings for the game and used its values in our game logic.
+2.In Dealer, In Player and in Table, we used the number of players, the time for penalty and score, the time of the game until shuffle etc.
+3.We changed the values in the properties config and checked that what was written there was implemented in the game.
+
+--------------------
+
+2. Terminating all threads (that you created) gracefully and in reverse order to the order they were created in.
+
+1. We did it in the terminate of dealer using join, by descending order so each thread that began last will be the first to terminate
+2.In Dealer terminate
+3.We used prints to check which of the threads where to terminate first, checked the order of the termination process.
+
+--------------------
+
+3. Handling the config.turnTimeoutMillis value as follows:
+config.turnTimeoutMillis < 0: display nothing.
+config.turnTimeoutMillis = 0: display a timer since the last action (reshuffle or set collected).
+Note: in modes without a countdown timer the dealer must ensure there is always at least one legal set on the table.
+
+We are not entitled to this bonus.
+Although we did reshuffle if there is no set on the table!
+
+--------------------
+
+4. Making sure that the threads do not wake up unless some actual job needs to be done (e.g., a value needs to be
+changed on the display, key input needs to be handled, etc.) and the only threads created by you are:
+1 thread per player + 1 additional thread for non-human players.
+
+We are not entitled to this bonus.
